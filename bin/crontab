@@ -1,0 +1,13 @@
+# 5分钟轮询一次
+
+# crontab –e : 修改 crontab 文件. 如果文件不存在会自动创建。
+# crontab –l : 显示 crontab 文件。
+# crontab -r : 删除 crontab 文件。
+
+# 按实际情况修改目录
+
+# On my MAC
+*/5 * * * * php /Users/hyf/sites/airlook/run polling >> /Users/hyf/sites/airlook/public/logs/polling.log
+
+# On my release server
+*/5 * * * * php /var/www/html/AirLook/run polling >> /var/www/html/AirLook/public/logs/polling.log
